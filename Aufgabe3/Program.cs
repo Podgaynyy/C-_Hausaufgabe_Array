@@ -1,17 +1,19 @@
-﻿//Задача 3: Задайте массив из вещественных чисел с ненулевой дробной частью.
-//Найдите разницу между максимальным и минимальным элементов массива.
+//Aufgabe 3: Geben Sie ein Array reeller Zahlen mit einem Bruchteil ungleich Null an.
+//Ermitteln Sie die Differenz zwischen den maximalen und minimalen Elementen des Arrays.
 
-//в этот раз обошёлся без точки входа и пользуюсь консолью
-double[] array = { 0.35, 2.15, 3.17, 8.94, 5.22 }; //создал массив вручную
-double min = array[0]; //создали значение для минимума, по умолчанию первый элемент
-double max = array[0]; // создали значение для максимума, первый элемент
-for (int i = 0; i < array.Length; i++) //пройдёмся по массиву
+
+//Dieses Mal habe ich auf einen Einstiegspunkt verzichtet und die Konsole verwendet
+double[] array = { 0.35, 2.15, 3.17, 8.94, 5.22 }; //das Array manuell erstellt
+double min = array[0]; //einen Wert für das Minimum erstellt, standardmäßig das erste Element
+double max = array[0]; // einen Wert für das Maximum erstellt, das erste Element
+for (int i = 0; i < array.Length; i++) //Lass uns das Array durchgehen
 {
-    if (array[i] > max) { max = array[i]; } //если элемент больше значения в минимуме,
-                                            //то он новый максимум
-    else if (array[i] < min) { min = array[i]; } //если элемент меньше минимума,
-                                                 //то он новый минимум
-    else { continue; } // если равен, то пропустим
+    if (array[i] > max) { max = array[i]; } //wenn das Element größer als der Mindestwert ist,
+                                            //dann ist es ein neues Maximum
+    else if (array[i] < min) { min = array[i]; } //wenn das Element kleiner als das Minimum ist,
+                                                 //dann ist es ein neues Minimum
+    else { continue; } // wenn gleich, dann überspringen
 }
 double substrahieren = max - min;
-Console.WriteLine(substrahieren); // распечатаем разницу
+Console.WriteLine(substrahieren); 
+// Differenz ausgeben
